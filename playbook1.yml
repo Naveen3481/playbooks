@@ -1,0 +1,15 @@
+---
+- name: create user
+  hosts: all
+  tasks:
+    - name: user creation on all nodes
+      user:
+        name: anu 
+        password: intelliqit 
+        uid: 12345
+        home: /home/ubuntu/anu
+        comment: "a regular user"
+        shell: /bin/bash
+        state: absent
+
+...
