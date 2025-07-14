@@ -1,1 +1,10 @@
-hi
+---
+- name: install/uninstall soft appli using global scope variables
+  hosts: all
+  tasks: 
+   - name: install/uninstall
+     apt: 
+      name: "{{a}}"
+      state: "{{b}}"
+      update_cache: "{{c}}"
+...        
