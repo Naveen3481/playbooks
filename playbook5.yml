@@ -1,0 +1,14 @@
+---
+- name: Install/unistall sw applications using playscope variables
+  hosts: all
+  vars:
+    a: tomcat10
+    b: present
+    c: yes
+  tasks:
+   - name: Install/unisntall
+     apt:
+      name: "{{a}}"
+      state: "{{b}}"
+      update_cache: "{{c}}"
+...

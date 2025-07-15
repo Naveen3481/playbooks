@@ -1,0 +1,10 @@
+---
+- name: Install various s/w applications without with_items alternative way for playbook6
+  hosts: all
+  tasks:
+   - name: Install tree
+     apt:
+      name: ["tree","git","maven"]
+      state: present
+      update_cache: no
+...
